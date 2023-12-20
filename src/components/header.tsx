@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const navPages = [
@@ -8,12 +9,17 @@ const navPages = [
 
 export default function Header() {
   return (
-    <header className="bg-slate-100 p-8 shadow-lg">
+    <header className="bg-white p-4 shadow-lg border border-black/10">
       <nav className="flex flex-row justify-between items-center">
-        <h1>Search The City</h1>
+        <Link href="/">
+          <h1>Search The City</h1>
+        </Link>
         <ul className="flex flex-row gap-5">
           {navPages.map(({ title, path }) => (
-            <li key={path}>
+            <li
+              className="text-slate-950/80 p-2 px-6 bg-zinc-50 rounded-full"
+              key={path}
+            >
               <a href={path}>{title}</a>
             </li>
           ))}
