@@ -22,7 +22,7 @@ export default function Header() {
         <ul className="flex flex-row gap-5">
           {navPages.map(({ title, path }) => (
             <li
-              className={clsx("p-2 px-6rounded-full transition-all", {
+              className={clsx("p-2 px-6 rounded-full transition-all", {
                 "bg-slate-800 text-white": activePathname === path,
                 "hover:bg-slate-800 hover:text-white": activePathname !== path,
               })}
