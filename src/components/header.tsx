@@ -1,4 +1,8 @@
+"use client";
+
+import clsx from "clsx";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const navPages = [
@@ -8,6 +12,7 @@ const navPages = [
 ];
 
 export default function Header() {
+  const activePathname = usePathname();
   return (
     <header className="bg-white p-4 shadow-lg border border-black/10">
       <nav className="flex flex-row justify-between items-center">
@@ -17,7 +22,10 @@ export default function Header() {
         <ul className="flex flex-row gap-5">
           {navPages.map(({ title, path }) => (
             <li
-              className="text-slate-950/80 p-2 px-6 bg-zinc-50 rounded-full"
+              className={clsx("p-2 px-6rounded-full transition-all", {
+                "bg-slate-800 text-white": activePathname === path,
+                "hover:bg-slate-800 hover:text-white": activePathname !== path,
+              })}
               key={path}
             >
               <a href={path}>{title}</a>
