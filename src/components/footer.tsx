@@ -21,7 +21,7 @@ export default function Footer() {
       <small>&copy; 2024 Aaron K. Altman All Rights</small>
       <ul className="flex flex-row gap-5 pr-3">
         {routes.map((route) => (
-          <p>{route.name}</p>
+          <p key={route.href}>{route.name}</p>
         ))}
       </ul>
     </footer>

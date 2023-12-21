@@ -1,3 +1,4 @@
+import MyH1 from "@/components/h1";
 import SearchForm from "@/components/search-form";
 import Link from "next/link";
 
@@ -5,7 +6,7 @@ export default function Home() {
   return (
     <main className="flex flex-col justify-center items-center p-10">
       <section>
-        <h1 className="text-5xl">Search for an Event Below</h1>
+        <MyH1>Welcome to the event search App</MyH1>
         <p className="text-3xl pt-3 text-center">Search for an Event Below</p>
         <SearchForm />
       </section>
