@@ -36,10 +36,20 @@ export default async function SingleEventPage({
             height={201}
           />
           <div className="">
+            <p className="text-white text-sm pb-1">
+              {new Date(event.date).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              })}
+            </p>
             <p className="text-3xl text-white pb-1">{event.name}</p>
             <p className="text-white italic text-lg">
               organized by {event.organizerName}
             </p>
+            <button className="mt-4 bg-white text-slate-900 py-2 px-10 rounded-lg">
+              Get Tickets
+            </button>
           </div>
         </div>
       </section>
