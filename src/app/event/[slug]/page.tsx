@@ -17,7 +17,7 @@ export default async function SingleEventPage({
   const event = await response.json();
 
   return (
-    <main className="flex flex-col max-w-6xl mx-auto -mt-[120px] bg-zinc-50 overflow-hidden">
+    <main className="bg-zinc-50 overflow-hidden">
       <section className="relative h-[361px] overflow-hidden flex px-4 mb-10">
         <Image
           alt="hello"
@@ -27,7 +27,7 @@ export default async function SingleEventPage({
           className="object-cover blur-3xl z-0 overflow-hidden"
           quality={50}
         />
-        <div className="z-1 relative flex justify-center items-center flex-1 gap-10 ">
+        <div className="z-1 relative flex max-w-xl mx-auto justify-center items-center flex-1 gap-10 ">
           <Image
             className="rounded-xl border border-black/10"
             alt="hello"
@@ -53,9 +53,9 @@ export default async function SingleEventPage({
           </div>
         </div>
       </section>
-      <div className="flex flex-col px-4">
-        <h1>{event.name}</h1>
-        <p>{event.description}</p>
+      <div className="max-w-lg mx-auto">
+        <h1 className="text-xl pb-4">About {event.name}</h1>
+        <p className="">{event.description}</p>
       </div>
     </main>
   );
