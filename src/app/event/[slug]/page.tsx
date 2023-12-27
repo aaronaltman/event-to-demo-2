@@ -18,7 +18,7 @@ export default async function SingleEventPage({
 
   return (
     <main className="flex flex-col max-w-6xl mx-auto -mt-[120px] bg-zinc-50 overflow-hidden">
-      <section className="relative h-[361px] overflow-hidden flex px-4">
+      <section className="relative h-[361px] overflow-hidden flex px-4 mb-10">
         <Image
           alt="hello"
           src={event.imageUrl}
@@ -47,7 +47,7 @@ export default async function SingleEventPage({
             <p className="text-white italic text-lg">
               organized by {event.organizerName}
             </p>
-            <button className="mt-4 bg-white text-slate-900 py-2 w-full rounded-lg hover:bg-slate-900 hover:text-white hover:scale-110 transition-all">
+            <button className="mt-4 bg-white text-slate-900 py-2 w-full rounded-lg hover:bg-slate-900 hover:text-white hover:scale-105 transition-all border-white/10 border-2">
               Get Tickets
             </button>
           </div>
