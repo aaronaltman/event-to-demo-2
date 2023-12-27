@@ -47,7 +47,7 @@ export default async function SingleEventPage({
             <p className="text-white italic text-lg">
               organized by {event.organizerName}
             </p>
-            <button className="mt-4 bg-white text-slate-900 py-2 px-10 rounded-lg">
+            <button className="mt-4 bg-white text-slate-900 py-2 w-full rounded-lg hover:bg-slate-900 hover:text-white hover:scale-110 transition-all">
               Get Tickets
             </button>
           </div>
