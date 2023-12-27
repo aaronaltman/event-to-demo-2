@@ -8,7 +8,7 @@ type EventCardProps = {
 
 export default function EventCard({ event }: EventCardProps) {
   return (
-    <section className="flex flex-col flex-1 basis-80 items-center h-[380px] max-w-[500px] rounded-md overflow-hidden bg-slate-900">
+    <section className="flex flex-col flex-1 basis-80 items-center h-[380px] max-w-[500px] rounded-md overflow-hidden bg-slate-900 relative">
       <Image
         alt={event.name}
         width={500}
@@ -21,6 +21,10 @@ export default function EventCard({ event }: EventCardProps) {
         <h3 className="text-base">{event.oganizationName}</h3>
         <p className="text-italic">{event.location}</p>
       </div>
+      <section className="flex flex-col justify-center items-center rounded-sm absolute left-0 top-0 h-20 w-20 bg-slate-800 text-white">
+        <p>29</p>
+        <p>Aug</p>
+      </section>
     </section>
   );
 }
