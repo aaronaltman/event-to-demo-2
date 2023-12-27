@@ -22,8 +22,20 @@ export default function EventCard({ event }: EventCardProps) {
         <p className="text-italic">{event.location}</p>
       </div>
       <section className="flex flex-col justify-center items-center rounded-sm absolute left-0 top-0 h-20 w-20 bg-slate-800 text-white">
-        <p>29</p>
-        <p>Aug</p>
+        <p className="text-xl italic">
+          {
+            // Ensure event.date is a Date object
+
+            new Date(event.date).toLocaleString("en-US", {
+              day: "2-digit", // 2-digit day
+            })
+          }
+        </p>
+        <p className="italic">
+          {new Date(event.date).toLocaleString("en-US", {
+            month: "short", // 2-digit month
+          })}
+        </p>
       </section>
     </section>
   );
