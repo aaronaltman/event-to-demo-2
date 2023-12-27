@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="flex flex-col justify-center items-center p-10">
       <section>
-        <MyH1>Welcome to the event search App</MyH1>
+        <MyH1 className="mb-20px">Welcome to the event search App</MyH1>
         <p className="text-3xl pt-3 text-center">Search for an Event Below</p>
         <SearchForm />
       </section>
