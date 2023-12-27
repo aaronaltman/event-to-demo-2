@@ -3,12 +3,13 @@ import { twMerge } from "tailwind-merge";
 
 type MyH1Props = {
   children: React.ReactNode;
-  className: string; // Ensure this is included in the destructuring of the component's parameters
+  className?: string; // Made optional with '?'
 };
 
-export default function MyH1({ children, className }: MyH1Props) {
-  // Correctly applying the MyH1Props type to the function parameters
+export default function MyH1({ children, className = "" }: MyH1Props) {
   return (
-    <h1 className={twMerge("text-5xl capitalize", className)}>{children}</h1>
+    <h1 className={twMerge("text-5xl capitalize py-4", className)}>
+      {children}
+    </h1>
   );
 }

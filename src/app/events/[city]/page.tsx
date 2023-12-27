@@ -18,11 +18,13 @@ export default async function EventsPage({ params }: EventsPageProps) {
   const events: EventoEvent[] = await response.json();
 
   return (
-    <main className="flex flex-col items-center">
-      <MyH1>
-        {city === "all" && "All Events"}
-        {city !== "all" && `Events in ${city}`}
-      </MyH1>
+    <main className="flex flex-col items-center pb-20">
+      <div className="py-10">
+        <MyH1>
+          {city === "all" && "All Events"}
+          {city !== "all" && `Events in ${city}`}
+        </MyH1>
+      </div>
       <EventsList events={events} />
     </main>
   );
