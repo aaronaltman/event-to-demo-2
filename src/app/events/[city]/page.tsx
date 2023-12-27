@@ -20,7 +20,7 @@ export default async function EventsPage({ params }: EventsPageProps) {
   return (
     <main className="flex flex-col items-center pb-20">
       <div className="py-10">
-        <MyH1>
+        <MyH1 className="py-10">
           {city === "all" && "All Events"}
           {city !== "all" && `Events in ${city}`}
         </MyH1>

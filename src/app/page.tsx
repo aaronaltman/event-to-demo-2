@@ -7,7 +7,7 @@ export default function Home() {
     <main className="flex flex-col justify-center items-center p-10">
       <section>
         <div className="py-4">
-          <MyH1>Welcome to the event search App</MyH1>
+          <MyH1 className="py-4">Welcome to the event search App</MyH1>
         </div>
         <p className="text-3xl pt-3 text-center">Search for an Event Below</p>
         <SearchForm />
