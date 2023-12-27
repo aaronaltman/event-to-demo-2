@@ -14,8 +14,8 @@ export default function Home() {
       </section>
       <section className="flex flex-row text-left gap-5 pt-3">
         <p>Popular Events:</p>
-        <Link href="/event">Austin</Link>
-        <Link href="/event">Dallas</Link>
+        <Link href="/events/austin">Austin</Link>
+        <Link href="/events/seattle">Seattle</Link>
       </section>
     </main>
   );
