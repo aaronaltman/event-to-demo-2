@@ -8,7 +8,7 @@ type EventListProps = {
 
 export default function EventsList({ events }: EventListProps) {
   return (
-    <section className="">
+    <section className="max-w-6xl pl-4 pr-4 flex flex-wrap gap-10 justify-center">
       {events.map((event) => (
         <EventCard key={event.id} event={event} />
       ))}
