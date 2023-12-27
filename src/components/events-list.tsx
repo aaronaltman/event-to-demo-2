@@ -8,7 +8,7 @@ type EventListProps = {
 
 export default function EventsList({ events }: EventListProps) {
   return (
-    <section>
+    <section className="">
       {events.map((event) => (
         <EventCard key={event.id} event={event} />
       ))}
